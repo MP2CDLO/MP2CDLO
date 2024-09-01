@@ -71,7 +71,7 @@
             <span style="color: orange; font-weight:bold">Quasi</span><span style="color: rgb(200, 144, 252); font-weight:bold">Sim</span>
           </h1> -->
           <h2 class="title is-1 publication-title">
-            Shape Control of Deformable Linear Objects
+            Self-supervised Learning of Reconstructing Deformable Linear Objects under <br> Single-Frame Occluded View
           </h2>
           <!-- Shape Control of Deformable Linear Objects -->
 
@@ -87,22 +87,19 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Song Wang</a><sup>*</sup>,</span>
+              <a href="">Song Wang</a>,</span>
             <span class="author-block">
-              <a href="">Yue Wang</a><sup>*</sup>,</span>
+              <a href="">Guanghui Shen</a>,</span>
             <span class="author-block">
-              <a href="">Haoran Wang</a><sup>*</sup>,</span>
+              <a href="">Shirui Wu</a>,</span>
             <span class="author-block">
-              <a href="">Xueyi Liu</a><sup>*</sup>
-            </span>
+              <a href="">Dan Wu</a></span>
           </div>
-
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Equal contribution with the order determined by rolling dice.</span>
+            <span class="author-block">Tsinghua University</span>
           </div>
-
           <div class="is-size-5 publication-authors">
-            <span style="font-weight:bold">DRL 2024 Spring Course Project</span>
+            <span style="font-weight:bold">ICRA2025</span>
           </div>
 
 
@@ -138,7 +135,7 @@
               </span>
                -->
               <span class="link-block">
-                <a href="https://github.com/UbeCc/dlo-drl2024/"
+                <a href="https://github.com/MP2CDLO/MP2CDLO"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -220,7 +217,7 @@
 
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -281,7 +278,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -393,408 +390,6 @@
                   </video>
                   <p>
                     Target Shape 4
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-          </div>
-
-
-
-          <p> Generalize from the small training set to the level 2 test set.</p>
-          <div class="columns is-centered">
-
-            <!-- <video class="lazy" autoplay muted loop playsinline width="100%">
-                <source data-src="static/videos-lowres/hoi4d-res-2-block-3.mp4" type="video/mp4">
-              </video> -->
-
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_humandemo" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/small-tr-level-2-seed-0.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 1
-                </p>
-        
-              </div>
-            </div>
-        
-            <!-- Visual Effects. -->
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_baseline" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/small-tr-level-2-seed-1.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 2
-                </p>
-              </div>
-            </div>
-        
-            <!-- Matting. -->
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/small-tr-level-2-seed-2.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 3
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/small-tr-level-2-seed-3.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 4
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-          </div>
-
-          <p> Generalize from the Large training set to the level 1 test set <span style="color: rgb(253, 125, 212); font-weight:bold">with task curriculum</span>.</p>
-          <div class="columns is-centered">
-
-            <!-- <video class="lazy" autoplay muted loop playsinline width="100%">
-                <source data-src="static/videos-lowres/hoi4d-res-2-block-3.mp4" type="video/mp4">
-              </video> -->
-
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_humandemo" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-curri(1).mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 1
-                </p>
-        
-              </div>
-            </div>
-        
-            <!-- Visual Effects. -->
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_baseline" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-curri(1)_1.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 2
-                </p>
-              </div>
-            </div>
-        
-            <!-- Matting. -->
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-curri(1)_2.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 3
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-curri(1)_3.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 4
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-          </div>
-
-          <p> Generalize from the Large training set to the level 1 test set.</p>
-          <div class="columns is-centered">
-
-            <!-- <video class="lazy" autoplay muted loop playsinline width="100%">
-                <source data-src="static/videos-lowres/hoi4d-res-2-block-3.mp4" type="video/mp4">
-              </video> -->
-
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_humandemo" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-v2(1).mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 1
-                </p>
-        
-              </div>
-            </div>
-        
-            <!-- Visual Effects. -->
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_baseline" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-v2(1)_1.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 2
-                </p>
-              </div>
-            </div>
-        
-            <!-- Matting. -->
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-v2(1)_2.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 3
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-set-level-1-gen-v2(1)_3.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 4
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-          </div>
-
-
-          <p> Generalize from the Large training set to the level 2 test set <span style="color: rgb(253, 125, 212); font-weight:bold">with task curriculum</span>.</p>
-          <div class="columns is-centered">
-
-            <!-- <video class="lazy" autoplay muted loop playsinline width="100%">
-                <source data-src="static/videos-lowres/hoi4d-res-2-block-3.mp4" type="video/mp4">
-              </video> -->
-
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_humandemo" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/large-tr-level-2-seed-0-curri.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 1
-                </p>
-        
-              </div>
-            </div>
-        
-            <!-- Visual Effects. -->
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_baseline" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/large-tr-level-2-seed-1-curri.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 2
-                </p>
-              </div>
-            </div>
-        
-            <!-- Matting. -->
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-level-2-seed-2-curri.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 3
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-level-2-seed-3-curri.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 4
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-          </div>
-
-          <p> Generalize from the Large training set to the level 2 test set.</p>
-          <div class="columns is-centered">
-
-            <!-- <video class="lazy" autoplay muted loop playsinline width="100%">
-                <source data-src="static/videos-lowres/hoi4d-res-2-block-3.mp4" type="video/mp4">
-              </video> -->
-            
-              <div class="column">
-                <div class="content">
-                  <video id="grab_mouse_102_isaac_v2_humandemo" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-set-level-2-gen-v2.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 1
-                  </p>
-          
-                </div>
-              </div>
-          
-              <!-- Visual Effects. -->
-              <div class="column">
-                <div class="content">
-                  <video id="grab_mouse_102_isaac_v2_baseline" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/large-tr-set-level-2-gen-v2_1.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Target Shape 2
-                  </p>
-                </div>
-              </div>
-          
-              <!-- Matting. -->
-              <div class="column">
-                <!-- <h2 class="title is-3">Matting</h2> -->
-                <div class="columns is-centered">
-                  <div class="column content">
-                    <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                      <source data-src="./static/videos-lowres/large-tr-set-level-2-gen-v2_2.mp4"
-                              type="video/mp4">
-                    </video>
-                    <p>
-                      Target Shape 3
-                    </p>
-                  </div>
-          
-                </div>
-              </div>
-  
-              <div class="column">
-                <!-- <h2 class="title is-3">Matting</h2> -->
-                <div class="columns is-centered">
-                  <div class="column content">
-                    <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                      <source data-src="./static/videos-lowres/large-tr-set-level-2-gen-v2_3.mp4"
-                              type="video/mp4">
-                    </video>
-                    <p>
-                      Target Shape 4
-                    </p>
-                  </div>
-          
-                </div>
-              </div>
-            </div>
-    
-
-          <p> Texture Shift on <b>twist</b> and <b>bend</b> of the Rope.</p>
-          <div class="columns is-centered">
-
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_humandemo" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/tex-2e4-2e5.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Twist=2e4, Bend=2e5; Normal.
-                </p>
-        
-              </div>
-            </div>
-        
-            <!-- Visual Effects. -->
-            <div class="column">
-              <div class="content">
-                <video id="grab_mouse_102_isaac_v2_baseline" class="lazy" autoplay controls muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/tex-2e4-4e4.mp4"
-                          type="video/mp4">
-                </video>
-                <p>
-                  Twist=2e4, Bend=4e4; Deviant.
-                </p>
-              </div>
-            </div>
-        
-            <!-- Matting. -->
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/tex-2e4-4e5.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Twist=2e4, Bend=4e5; Tight.
-                  </p>
-                </div>
-        
-              </div>
-            </div>
-
-            <div class="column">
-              <!-- <h2 class="title is-3">Matting</h2> -->
-              <div class="columns is-centered">
-                <div class="column content">
-                  <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline height="100%">
-                    <source data-src="./static/videos-lowres/tex-5e4-4e4.mp4"
-                            type="video/mp4">
-                  </video>
-                  <p>
-                    Twist=5e4, Bend=4e4; Slipped.
                   </p>
                 </div>
         
