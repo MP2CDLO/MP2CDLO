@@ -326,9 +326,6 @@
 
     <div class="container is-max-desktop is-centered has-text-centered">
 
-
-
-
       <div class="columns is-centered">
 
 
@@ -365,39 +362,6 @@
               </div>
             </div>
 
-
-            <!-- Matting. -->
-            <!--<div class="column">
-            <h2 class="title is-3">Matting</h2> 
-            <div class="columns is-centered">
-              <div class="column content">
-                <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline
-                  height="100%">
-                  <source data-src="./static/videos-lowres/small-tr-level-1-seed-2.mp4" type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 3
-                </p>
-              </div>
-
-            </div>
-          </div>-->
-
-            <!-- <div class="column">
-            <h2 class="title is-3">Matting</h2> 
-            <div class="columns is-centered">
-              <div class="column content">
-                <video id="grab_mouse_102_isaac_v2_ours" class="lazy" autoplay controls muted loop playsinline
-                  height="100%">
-                  <source data-src="./static/videos-lowres/small-tr-level-1-seed-4.mp4" type="video/mp4">
-                </video>
-                <p>
-                  Target Shape 4
-                </p>
-              </div>
-
-            </div>
-          </div> -->
           </div>
         </div>
 
@@ -406,9 +370,6 @@
 
 
     </div>
-
-
-
 
 
   </section>
@@ -438,9 +399,10 @@
           <br>
           <div style="margin-bottom: -10px;">
           </div>
-          <p> I don't know what to write, just writing something to fill the space for now. </p>
-          <br>
 
+          <img src="./static/images/label.png" alt="Label PNG" width="80%" height="100%">
+          <p> </p>
+          <br>
           <div class="columns is-centered">
 
             <div class="video-container">
@@ -490,23 +452,66 @@
           </div>
         </div>
       </div>
-      <img src="./static/images/label.png" alt="Label PNG" width="100%" height="100%">
-    </div>
-    </div>
-    </div>
 
     </div>
-
-
-
-    </div>
-
-
-
 
 
   </section>
 
+  </section>
+  <!--Training and Experimental Results Based on Real Data-->
+
+  <div class="container is-full-hd is-centered">
+    <div class="line"></div>
+  </div>
+
+
+  <section class="section">
+
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <div class="columns is-centered">
+        <!-- <h2 class="title is-3">Dexterous Manipulations Transfer</h2> -->
+        <div class="column is-full-width">
+          <h2 class="title is-3">Training and Experimental Results Based on Real Data</h2>
+          <!-- <p>We perform well on <span style="color: orange; font-weight:bold">intricate manipulations</span> such as complicated tool-using with <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object movements</span>, functional interactions with <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, and manipulations involving subtle object motions such as slight shaking.</p> -->
+          <!-- We can accurately track <span style="color: orange; font-weight:bold">complex manipulations</span> involving <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, <br> <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object motions</span>, and <span style="color: rgb(30, 143, 2); font-weight:bold">intricate tool-using</span>. -->
+          <br>
+          <br>
+          <div style="margin-bottom: -10px;">
+          </div>
+          <p> Manually Collect Some Real Linear Point Cloud Data Using an RGB-D Camera. </p>
+          <br>
+
+          <div class="columns is-centered">
+
+            <div class="video-container">
+              <div class="video-two-column">
+                <video id="hand collection rgb" class="lazy fixed-height-video " autoplay muted loop playsinline
+                  height="100%">
+                  <source data-src="./static/videos-lowres/hand_collection_rgb.mp4" type="video/mp4">
+                </video>
+                <p>
+                  Manually Collected Scene
+                </p>
+              </div>
+              <div class="video-two-column">
+                <video id="hand collection pcd" class="lazy fixed-height-video mirrored-video" autoplay muted loop
+                  playsinline height="100%">
+                  <source data-src="./static/videos-lowres/hand_collection_pcd.mp4" type="video/mp4">
+                </video>
+                <p>
+                  The Generated Point Cloud
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
 
 
   <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
