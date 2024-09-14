@@ -201,3 +201,36 @@ body {
   /* 水平镜像 */
   /* 如果需要垂直镜像，可以使用 scaleY(-1) */
 }
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  justify-content: center;
+  /* 居中对齐 */
+  gap: 20px;
+  /* 每个视频之间的间距 */
+}
+
+.video-two-column {
+  flex: 1 1 calc(50% - 20px);
+  /* 每行两个视频，减去间距 */
+  max-width: calc(50% - 20px);
+  /* 限制最大宽度 */
+  box-sizing: border-box;
+  /* 包括内边距和边框在内的宽度计算 */
+}
+
+.video-item {
+  flex: 1 1 calc(33.333% - 20px);
+  /* 每行三个视频，减去间距 */
+  max-width: calc(33.333% - 20px);
+  /* 限制最大宽度 */
+  box-sizing: border-box;
+  /* 包括内边距和边框在内的宽度计算 */
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
