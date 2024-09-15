@@ -88,6 +88,8 @@
             <img src="./static/images/icon-2-new.png" alt="logo" style="width: 60px; height: 78px; margin-right: -3px; margin-bottom: -10px;">
             <span style="color: orange; font-weight:bold">Quasi</span><span style="color: rgb(200, 144, 252); font-weight:bold">Sim</span>
           </h1> -->
+            <img src="./static/images/title.png" alt="title"
+              style="width: 45%; height: auto; margin-right: -3px; margin-bottom: 10px;">
             <h2 class="title is-1 publication-title">
               Self-supervised Learning of Reconstructing Deformable Linear Objects under <br> Single-Frame Occluded View
             </h2>
@@ -220,8 +222,9 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
 
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 center-text"><span style="color: rgb(0, 0, 0); font-weight:bold">Video</span></h2>
           <video class="lazy" autoplay controls muted height="100%">
             <source data-src="static/videos-lowres/demo_video.mp4" type="video/mp4">
             </source>
@@ -279,31 +282,50 @@
                 Reconstruction Framework</span></h4>
           </div>
           <div class="content has-text-justified">
-            <p><span>The framework first employs a
-                self-supervised method to complete the DLO's point clouds. To overcome the weak supervisory signals
-                inherent in self-supervised learning, we introduce a memory module that extracts memory across samples
-                to reinforce the supervisory signals. For the complexities introduced by the highly intricate shapes
-                of DLOs, we integrate DLO prior knowledge constraints, which guide the training process for improved
-                performance. Subsequently, a series of traditional methods (clustering, sorting, fitting and
-                resampling) are applied to generate ordered key points. This framework leverages the feature
-                extraction capabilities of deep learning to capture global characteristics and represent information
-                beyond pure geometry. By adopting a self-supervised learning approach, the framework eliminates the
-                need for labeled data in virtual environments, effectively bridging the Sim2Real gap.</span></p>
+            <p>The framework employs <span style="color:rgb(102, 8, 116); font-weight:bold">a
+                self-supervised method</span> to complete the DLO's point clouds. To overcome the weak supervisory
+              signals
+              inherent in self-supervised learning, we introduce <span
+                style="color:rgb(102, 8, 116); font-weight:bold">a memory module </span>that extracts memory across
+              samples
+              to <span style="color:rgb(102, 8, 116); font-weight:bold">reinforce the supervisory signals</span>. For
+              the complexities introduced by the highly intricate shapes
+              of DLOs, we integrate <span style="color:rgb(102, 8, 116); font-weight:bold">DLO prior knowledge
+                constraints</span>, which <span style="color:rgb(102, 8, 116); font-weight:bold">guide the training
+                process</span> for improved
+              performance. Subsequently, a series of traditional methods (clustering, sorting, fitting and
+              resampling) are applied to <span style="color: rgb(40,61, 126); font-weight:bold">generate ordered key
+                points</span>. This framework leverages the feature
+              extraction capabilities of deep learning to capture global characteristics and represent information
+              beyond pure geometry. By adopting a self-supervised learning approach, the framework <span
+                style="color: rgb(40,61, 126); font-weight:bold">eliminates the
+                need for labeled data in virtual environments, effectively bridging the Sim2Real gap</span>.</p>
           </div>
           <img src="./figs/framework.png" alt="Framework PNG" width="100%" height="100%">
           <div class="content has-text-justified">
             <p class="center-text">
-              <span style="color: rgb(102, 8, 116); font-weight:bold"> A. Self-supervised
-                DLO Point cloud completion.</span>
+              <span style="color: rgb(41, 34, 33); font-weight:bold"> A. Self-supervised
+                DLO Point cloud completion, </span>
               <!-- <br> -->
-              <span style="color: rgb(102, 8, 116); font-weight:bold">B. Ordered key points generation.</span>
+              <span style="color: rgb(41, 34, 33); font-weight:bold">B. Ordered key points generation.</span>
             </p>
             <p>
-              After embedding direction information, the partial point cloud \(P_{p}\) is fed into our
-              self-supervised DLO point cloud completion neural network to generate the complete point cloud \(P_{c}\).
+              After <span style="color: rgb(254, 180, 123); font-weight:bold;">embedding direction information</span>,
+              the
+              <span style="color: rgb(104, 104, 104); font-weight:bold">partial point cloud \(P_{p}\) </span>is fed
+              into
+              our
+              self-supervised DLO point cloud completion <span
+                style="color: rgb(161, 161, 244); font-weight:bold">neural
+                network </span>to generate the<span style="color: rgb(67, 133, 199); font-weight:bold"> complete point
+                cloud \(P_{c}\)</span>.
               To
-              estimate the state of the DLO, \(P_{c}\) undergoes clustering, sorting, B-spline fitting and resampling,
-              ultimately resulting in the reconstructed key points.
+              estimate the state of the DLO, \(P_{c}\) undergoes <span
+                style="color: rgb(0, 0, 0); font-weight:bold">clustering, sorting,
+                B-spline fitting and
+                resampling</span>,
+              ultimately resulting in the <span style="color: rgb(124, 8, 131); font-weight:bold">reconstructed key
+                points</span>.
             </p>
           </div>
         </div>
@@ -534,41 +556,49 @@
           <div class="columns is-centered">
             <div class="video-container">
               <div class="video-item">
+                <img src="./static/images/robotic1.png" alt="Robotic Single Frame 1" width="100%">
                 <video id="Robotic Single Frame 1" class="lazy" autoplay muted loop playsinline height="100%">
                   <source data-src="./static/videos-lowres/robotic/robotic1.mp4" type="video/mp4">
                 </video>
                 <p>Robotic Single Frame 1</p>
               </div>
               <div class="video-item">
+                <img src="./static/images/robotic2.png" alt="Robotic Single Frame 1" width="100%">
                 <video id="Robotic Single Frame 2" class="lazy" autoplay muted loop playsinline height="100%">
                   <source data-src="./static/videos-lowres/robotic/robotic2.mp4" type="video/mp4">
                 </video>
                 <p>Robotic Single Frame 2</p>
               </div>
               <div class="video-item">
+                <img src="./static/images/robotic3.png" alt="Robotic Single Frame 1" width="100%">
                 <video id="Robotic Single Frame 3" class="lazy" autoplay muted loop playsinline height="100%">
                   <source data-src="./static/videos-lowres/robotic/robotic3.mp4" type="video/mp4">
                 </video>
                 <p>Robotic Single Frame 3</p>
               </div>
+
               <div class="video-item">
+                <img src="./static/images/robotic4.png" alt="Robotic Single Frame 1" width="100%">
                 <video id="Robotic Single Frame 4" class="lazy" autoplay muted loop playsinline height="100%">
                   <source data-src="./static/videos-lowres/robotic/robotic4.mp4" type="video/mp4">
                 </video>
                 <p>Robotic Single Frame 4</p>
               </div>
               <div class="video-item">
+                <img src="./static/images/robotic5.png" alt="Robotic Single Frame 1" width="100%">
                 <video id="Robotic Single Frame 5" class="lazy" autoplay muted loop playsinline height="100%">
                   <source data-src="./static/videos-lowres/robotic/robotic5.mp4" type="video/mp4">
                 </video>
                 <p>Robotic Single Frame 5</p>
               </div>
               <div class="video-item">
+                <img src="./static/images/robotic6.png" alt="Robotic Single Frame 1" width="100%">
                 <video id="Robotic Single Frame 6" class="lazy" autoplay muted loop playsinline height="100%">
                   <source data-src="./static/videos-lowres/robotic/robotic6.mp4" type="video/mp4">
                 </video>
                 <p>Robotic Single Frame 6</p>
               </div>
+
             </div>
           </div>
         </div>
