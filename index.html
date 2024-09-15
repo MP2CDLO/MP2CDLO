@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <!-- <link rel="stylesheet" href="./static/css/styles.css"> -->
-  <link rel="icon" href="./static/images/icon_test.jpg">
+  <link rel="icon" href="./static/images/icon.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -224,7 +224,7 @@
       <div class="columns is-centered has-text-centered">
 
         <div class="column is-four-fifths">
-          <h2 class="title is-3 center-text"><span style="color: rgb(0, 0, 0); font-weight:bold">Video</span></h2>
+
           <video class="lazy" autoplay controls muted height="100%">
             <source data-src="static/videos-lowres/demo_video.mp4" type="video/mp4">
             </source>
@@ -250,10 +250,10 @@
               integrates self-supervised point cloud
               completion with traditional techniques like clustering, sorting, and fitting to
               generate ordered key points.
-              <span style="color: rgb(102, 8, 116); font-weight:bold">A memory module is proposed to enhance the
-                self-supervised training process by consolidating prototype information, while
-                <span style="color: rgb(102, 8, 116); font-weight:bold">DLO shape constraints </span>are
-                utilized</span> to improve reconstruction accuracy.
+              <span style="color: rgb(102, 8, 116); font-weight:bold">A memory module</span> is proposed to enhance the
+              self-supervised training process by consolidating prototype information, while <span
+                style="color: rgb(102, 8, 116); font-weight:bold">DLO shape constraints </span>are
+              utilized</span> to improve reconstruction accuracy.
               Experimental results on
               both synthetic and real-world datasets
               demonstrate that our method
@@ -281,35 +281,34 @@
                 Single-Frame
                 Reconstruction Framework</span></h4>
           </div>
+          <img src="./figs/framework.png" alt="Framework PNG" width="100%" height="100%">
           <div class="content has-text-justified">
+            <p class="center-text">
+              <span style="color: rgb(41, 34, 33); font-weight:bold"> A. Self-supervised
+                DLO Point cloud completion, </span>
+
+              <span style="color: rgb(41, 34, 33); font-weight:bold">B. Ordered key points generation.</span>
+            </p>
             <p>The framework employs <span style="color:rgb(102, 8, 116); font-weight:bold">a
                 self-supervised method</span> to complete the DLO's point clouds. To overcome the weak supervisory
               signals
               inherent in self-supervised learning, we introduce <span
                 style="color:rgb(102, 8, 116); font-weight:bold">a memory module </span>that extracts memory across
               samples
-              to <span style="color:rgb(102, 8, 116); font-weight:bold">reinforce the supervisory signals</span>. For
+              to <span style="color:rgb(3, 168,158); font-weight:bold">reinforce the supervisory signals</span>. For
               the complexities introduced by the highly intricate shapes
               of DLOs, we integrate <span style="color:rgb(102, 8, 116); font-weight:bold">DLO prior knowledge
-                constraints</span>, which <span style="color:rgb(102, 8, 116); font-weight:bold">guide the training
+                constraints</span>, which <span style="color:rgb(3, 168,158); font-weight:bold">guide the training
                 process</span> for improved
-              performance. Subsequently, a series of traditional methods (clustering, sorting, fitting and
-              resampling) are applied to <span style="color: rgb(40,61, 126); font-weight:bold">generate ordered key
+              performance. Subsequently, a series of <span style="color:rgb(102, 8, 116); font-weight:bold">traditional
+                methods</span> (clustering, sorting, fitting and
+              resampling) are applied to <span style="color: rgb(3, 168,158); font-weight:bold">generate ordered key
                 points</span>. This framework leverages the feature
               extraction capabilities of deep learning to capture global characteristics and represent information
               beyond pure geometry. By adopting a self-supervised learning approach, the framework <span
                 style="color: rgb(40,61, 126); font-weight:bold">eliminates the
                 need for labeled data in virtual environments, effectively bridging the Sim2Real gap</span>.</p>
-          </div>
-          <img src="./figs/framework.png" alt="Framework PNG" width="100%" height="100%">
-          <div class="content has-text-justified">
-            <p class="center-text">
-              <span style="color: rgb(41, 34, 33); font-weight:bold"> A. Self-supervised
-                DLO Point cloud completion, </span>
-              <!-- <br> -->
-              <span style="color: rgb(41, 34, 33); font-weight:bold">B. Ordered key points generation.</span>
-            </p>
-            <p>
+            <!-- <p>
               After <span style="color: rgb(254, 180, 123); font-weight:bold;">embedding direction information</span>,
               the
               <span style="color: rgb(104, 104, 104); font-weight:bold">partial point cloud \(P_{p}\) </span>is fed
@@ -326,8 +325,11 @@
                 resampling</span>,
               ultimately resulting in the <span style="color: rgb(124, 8, 131); font-weight:bold">reconstructed key
                 points</span>.
-            </p>
+            </p> -->
           </div>
+          <!-- <div class="content has-text-justified">
+
+          </div> -->
         </div>
       </div>
 
@@ -338,7 +340,7 @@
     <div class="line"></div>
   </div> -->
   <div class="container is-max-desktop is-centered has-text-centered">
-    <h1 class="title is-2"><span style="color: rgb(0, 0, 0); font-weight:bold">Experiments</span></h1>
+    <h2 class="title is-3"><span style="color: rgb(0, 0, 0); font-weight:bold">Experiments</span></h2>
   </div>
   <!-- Vitural Data Generation -->
   <section class="section">
@@ -346,8 +348,8 @@
     <div class="container is-max-desktop is-centered has-text-centered">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Synthetic Dataset Generation</h2>
-          <br>
+          <h3 class="title is-4">Synthetic Dataset Generation</h3>
+
           <h4 class="title is-5"> The DLO has randomly moving endpoints,while an occlusion cube moves to simulate
             occlusions.</h4>
 
@@ -381,7 +383,7 @@
 
   <!--Divider-->
   <div class="container is-full-hd is-centered">
-    <div class="line"></div>
+    <div class="custom-line"></div>
   </div>
 
   <!-- Experimental Comparison Based on Virtual Data -->
@@ -391,10 +393,10 @@
       <div class="columns is-centered">
 
         <div class="column is-full-width">
-          <h2 class="title is-3">Simulation Experiment Comparison Based on Synthetic Data</h2>
+          <h3 class="title is-4">Simulation Experiments Comparison Based on Synthetic Data</h3>
           <!-- <p>We perform well on <span style="color: orange; font-weight:bold">intricate manipulations</span> such as complicated tool-using with <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object movements</span>, functional interactions with <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, and manipulations involving subtle object motions such as slight shaking.</p> -->
           <!-- We can accurately track <span style="color: orange; font-weight:bold">complex manipulations</span> involving <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, <br> <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object motions</span>, and <span style="color: rgb(30, 143, 2); font-weight:bold">intricate tool-using</span>. -->
-          <br>
+
           <br>
           <div style="margin-bottom: -10px;">
           </div>
@@ -456,7 +458,7 @@
 
   <!--Divider-->
   <div class="container is-full-hd is-centered">
-    <div class="line"></div>
+    <div class="custom-line"></div>
   </div>
 
   <!--Training and Experimental Results Based on Real Data-->
@@ -466,13 +468,13 @@
       <div class="columns is-centered">
         <!-- <h2 class="title is-3">Dexterous Manipulations Transfer</h2> -->
         <div class="column is-full-width">
-          <h2 class="title is-3">Training and Inference Results Based on Real Data</h2>
+          <h3 class="title is-4">Training and Inference Results Based on Real Data</h3>
           <!-- <p>We perform well on <span style="color: orange; font-weight:bold">intricate manipulations</span> such as complicated tool-using with <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object movements</span>, functional interactions with <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, and manipulations involving subtle object motions such as slight shaking.</p> -->
           <!-- We can accurately track <span style="color: orange; font-weight:bold">complex manipulations</span> involving <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, <br> <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object motions</span>, and <span style="color: rgb(30, 143, 2); font-weight:bold">intricate tool-using</span>. -->
           <br>
-          <br>
+
           <h3 class="title is-4">Training Stage</h3>
-          <br>
+
           <h4 class="title is-5"><span style="color: rgb(104, 104, 104); font-weight:bold">Simplify data collection by
               manual
               manipulation of both ends of DLO under an RGB-D
@@ -501,9 +503,11 @@
               </div>
             </div>
           </div>
-          <div class="line"></div>
+          <div class="container is-full-hd is-centered">
+            <div class="custom-line"></div>
+          </div>
           <br>
-          <br>
+
           <h3 class="title is-4">Inference Stage</h3>
 
 
@@ -516,95 +520,112 @@
                   height="100%">
                   <source data-src="./static/videos-lowres/robotic/robot_run_easy_rgb.mp4" type="video/mp4">
                 </video>
-                <p>
-                  Normal Scenario
-                </p>
+
               </div>
               <div class="video-two-column">
-                <video id="normal robotic motion pcd" class="lazy fixed-height-video mirrored-video" autoplay muted loop
-                  playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robot_run_easy_pcd.mp4" type="video/mp4">
+                <video id="normal robotic motion pcd" class="lazy fixed-height-video" autoplay muted loop playsinline
+                  height="100%">
+                  <source data-src="./static/videos-lowres/robotic/robot_run_hard_rgb.mp4" type="video/mp4">
                 </video>
-                <p>
-                  Completed Point Cloud
-                </p>
+
               </div>
               <div class="video-two-column">
                 <video id="complex robotic motion rgb" class="lazy fixed-height-video " autoplay muted loop playsinline
                   height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robot_run_hard_rgb.mp4" type="video/mp4">
+                  <source data-src="./static/videos-lowres/robotic/robot_run_easy_pcd.mp4" type="video/mp4">
+                </video>
+                <p>
+                  Normal Scenario
+                </p>
+
+              </div>
+              <div class="video-two-column">
+                <video id="complex robotic motion pcd" class="lazy fixed-height-video" autoplay muted loop playsinline
+                  height="100%">
+                  <source data-src="./static/videos-lowres/robotic/robot_run_hard_pcd.mp4" type="video/mp4">
                 </video>
                 <p>
                   Complex Scenario
                 </p>
               </div>
-              <div class="video-two-column">
-                <video id="complex robotic motion pcd" class="lazy fixed-height-video mirrored-video" autoplay muted
-                  loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robot_run_hard_pcd.mp4" type="video/mp4">
-                </video>
-                <p>
-                  Completed Point Cloud
-                </p>
+            </div>
+          </div>
+          <div class="container is-full-hd is-centered">
+            <div class="custom-line"></div>
+          </div>
+          <!-- More Single Frame Details-->
+          <div class="container is-max-desktop is-centered has-text-centered">
+            <div class="columns is-centered">
+              <div class="hero-body">
+                <h4 class="title is-5"><span style="color: rgb(104, 104, 104); font-weight:bold">More Single Frame
+                    Details</span></h4>
+                <div class="container">
+                  <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-fullbody">
+                      <img src="./static/images/robotic1.png" alt="Robotic Single Frame 1" width="100%">
+                      <video poster="" id="fullbody" autoplay playsinline muted loop height="10%">
+                        <source src="./static/videos-lowres/robotic/robotic1.mp4" type="video/mp4">
+                      </video>
+                      <p>Robotic Single Frame 1</p>
+                      <img src="./static/images/break.png" alt="space" width="100%">
+
+
+                    </div>
+                    <div class="item item-shiba">
+                      <img src="./static/images/robotic2.png" alt="Robotic Single Frame 2" width="100%">
+                      <video poster="" id="scissors" autoplay playsinline muted loop height="10%">
+                        <source src="./static/videos-lowres/robotic/robotic2.mp4" type="video/mp4">
+                      </video>
+                      <p>Robotic Single Frame 2</p>
+                      <img src="./static/images/break.png" alt="space" width="100%">
+                    </div>
+                    <div class="item item-shiba">
+                      <img src="./static/images/robotic3.png" alt="Robotic Single Frame 3" width="100%">
+                      <video poster="" id="scissors" autoplay playsinline muted loop height="10%">
+                        <source src="./static/videos-lowres/robotic/robotic3.mp4" type="video/mp4">
+                      </video>
+                      <p>Robotic Single Frame 3</p>
+                      <img src="./static/images/break.png" alt="space" width="100%">
+                    </div>
+                    <div class="item item-shiba">
+                      <img src="./static/images/robotic4.png" alt="Robotic Single Frame 4" width="100%">
+                      <video poster="" id="scissors" autoplay playsinline muted loop height="10%">
+                        <source src="./static/videos-lowres/robotic/robotic4.mp4" type="video/mp4">
+                      </video>
+                      <p>Robotic Single Frame 4</p>
+                      <img src="./static/images/break.png" alt="space" width="100%">
+                    </div>
+                    <div class="item item-shiba">
+                      <img src="./static/images/robotic5.png" alt="Robotic Single Frame 5" width="100%">
+                      <video poster="" id="shiba" autoplay playsinline muted loop height="100%">
+                        <source src="./static/videos-lowres/robotic/robotic5.mp4" type="video/mp4">
+                      </video>
+                      <p>Robotic Single Frame 5</p>
+                      <img src="./static/images/break.png" alt="space" width="100%">
+                    </div>
+                    <div class="item item-toby">
+                      <img src="./static/images/robotic6.png" alt="Robotic Single Frame 6" width="100%">
+                      <video poster="" id="toby" autoplay playsinline muted loop height="100%">
+                        <source src="./static/videos-lowres/robotic/robotic6.mp4" type="video/mp4">
+                      </video>
+                      <p>Robotic Single Frame 6</p>
+                      <img src="./static/images/break.png" alt="space" width="100%">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="line"></div>
-          <br>
+          <!-- <br>
           <h4 class="title is-5"><span style="color: rgb(104, 104, 104); font-weight:bold">More Single Frame
-              Details</span></h4>
-          <div class="columns is-centered">
-            <div class="video-container">
-              <div class="video-item">
-                <img src="./static/images/robotic1.png" alt="Robotic Single Frame 1" width="100%">
-                <video id="Robotic Single Frame 1" class="lazy" autoplay muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robotic1.mp4" type="video/mp4">
-                </video>
-                <p>Robotic Single Frame 1</p>
-              </div>
-              <div class="video-item">
-                <img src="./static/images/robotic2.png" alt="Robotic Single Frame 1" width="100%">
-                <video id="Robotic Single Frame 2" class="lazy" autoplay muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robotic2.mp4" type="video/mp4">
-                </video>
-                <p>Robotic Single Frame 2</p>
-              </div>
-              <div class="video-item">
-                <img src="./static/images/robotic3.png" alt="Robotic Single Frame 1" width="100%">
-                <video id="Robotic Single Frame 3" class="lazy" autoplay muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robotic3.mp4" type="video/mp4">
-                </video>
-                <p>Robotic Single Frame 3</p>
-              </div>
+              Details</span></h4> -->
 
-              <div class="video-item">
-                <img src="./static/images/robotic4.png" alt="Robotic Single Frame 1" width="100%">
-                <video id="Robotic Single Frame 4" class="lazy" autoplay muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robotic4.mp4" type="video/mp4">
-                </video>
-                <p>Robotic Single Frame 4</p>
-              </div>
-              <div class="video-item">
-                <img src="./static/images/robotic5.png" alt="Robotic Single Frame 1" width="100%">
-                <video id="Robotic Single Frame 5" class="lazy" autoplay muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robotic5.mp4" type="video/mp4">
-                </video>
-                <p>Robotic Single Frame 5</p>
-              </div>
-              <div class="video-item">
-                <img src="./static/images/robotic6.png" alt="Robotic Single Frame 1" width="100%">
-                <video id="Robotic Single Frame 6" class="lazy" autoplay muted loop playsinline height="100%">
-                  <source data-src="./static/videos-lowres/robotic/robotic6.mp4" type="video/mp4">
-                </video>
-                <p>Robotic Single Frame 6</p>
-              </div>
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
+
+
 
 
   <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
@@ -710,6 +731,29 @@
     };
   </script>
 
+  <!-- <script>
+    let currentSlide = 0;
+    const totalSlides = 2; // We have two sets of three items (123 and 456)
+
+    function moveCarousel(direction) {
+      const carousel = document.querySelector('.carousel');
+      const itemsPerScreen = 3; // 3 items per slide
+
+      currentSlide += direction;
+
+      // Implement looping
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1; // If it's the first slide, go to the last set
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = 0; // If it's the last slide, go back to the first set
+      }
+
+      // Calculate the offset for each slide, each step shifts by 100%/3 = 33.333%
+      const offset = -currentSlide * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+  </script> -->
 
 
 
