@@ -1,0 +1,5 @@
+NAME: EPN3D_rope
+N_POINTS: 2048
+CATEGORY_FILE_PATH: ./data/EPN3D_rope/EPN3D.json
+PARTIAL_POINTS_PATH: ./data/EPN3D_rope/%s/partial/%s.npy
+COMPLETE_POINTS_PATH: ./data/EPN3D_rope/%s/complete/%s.npy
