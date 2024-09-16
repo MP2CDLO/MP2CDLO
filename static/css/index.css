@@ -108,7 +108,7 @@ body {
 
 .results-carousel {
   overflow: hidden;
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
 
 }
@@ -120,6 +120,7 @@ body {
   border-radius: 10px;
   padding: 0;
   font-size: 15px;
+  width: 250px;
   /* 每行三个视频，减去间距 */
   /* 限制最大宽度 */
   /*  display: flex;
