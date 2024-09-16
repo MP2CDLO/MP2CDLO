@@ -1,2 +1,2 @@
 # MP2CDLO
-[ICRA2025] Self-supervised Learning of Reconstructing Deformable Linear Objects under Single-Frame Occluded View
+The source code will be made publicly available upon the acceptance of this paper. For a preliminary overview of our work, please visit our project webpage(https://mp2cdlo.github.io/MP2CDLO).
