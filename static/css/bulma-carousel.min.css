@@ -9,7 +9,6 @@
     transform: rotate(359deg);
   }
 }
-
 @keyframes spinAround {
   from {
     -webkit-transform: rotate(0);
@@ -101,7 +100,7 @@
   box-shadow: 0 2px 5px #3232321a;
   top: 50%;
   margin-top: -20px;
-  left: 0;
+  left: 10;
   cursor: pointer;
   transition: opacity .3s, -webkit-transform .3s;
   transition: transform .3s, opacity .3s;

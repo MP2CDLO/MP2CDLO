@@ -108,12 +108,13 @@ body {
 
 .results-carousel {
   overflow: hidden;
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
 
 }
 
 .results-carousel .item {
+  width: 250px;
   margin: 10px;
   overflow: hidden;
   border: 1px solid #bbb;
