@@ -161,24 +161,23 @@
                 </span> -->
 
                 <span class="link-block">
-                  <a href="https://1drv.ms/p/s!AgSPtac7QUbHgWaIULTBUP2uIgaf?e=cZwVUD"
-                    class="external-link button is-normal is-rounded is-dark">
+                  <a href="./static/pdfs/Supplement.pptx" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-slideshare"></i>
                     </span>
-                    <span>Slides (108MB)</span>
+                    <span>Slides</span>
                   </a>
                 </span>
 
-                <!-- <span class="link-block">
-                <a href="static/pdfs/Parameterized_Quasi_Physical_Simulators_for_Dexterous_Manipulations_Transfer_Supp.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Supp</span>
-                </a>
-              </span> -->
+                <span class="link-block">
+                  <a href="static/pdfs/Parameterized_Quasi_Physical_Simulators_for_Dexterous_Manipulations_Transfer_Supp.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dateset</span>
+                  </a>
+                </span>
 
                 <!-- <span class="link-block">
                 <a href="./static/others/highres-figs.zip"
@@ -193,10 +192,6 @@
               </div>
 
             </div>
-
-
-
-
           </div>
 
         </div>
@@ -207,6 +202,9 @@
                 <source data-src="static/videos-lowres/cover.mp4" type="video/mp4">
                 </source>
               </video>
+              <p><span style="color: rgb(102, 8, 116); font-weight:bold">Real-world </span>Demo of <span
+                  style="color: rgb(102, 8, 116); font-weight:bold">Occlusions</span> and <span
+                  style="color: rgb(102, 8, 116); font-weight:bold">Self-intersections</span></p>
             </div>
           </div>
         </div>
@@ -223,9 +221,13 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"><span style="color: rgb(0, 0, 0); font-weight:bold">Video</span></h2>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
 
         <div class="column is-four-fifths">
-
           <video class="lazy" autoplay controls muted height="100%" style="border: 2px solid #3232321a;">
             <source data-src="static/videos-lowres/demo_video.mp4" type="video/mp4">
             </source>
@@ -276,8 +278,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3"><span style="color: rgb(0, 0, 0); font-weight:bold">Framework</span></h2>
           <div class="content has-text-justified">
-            <h4 class="title is-5 center-text"><span
-                style="color: rgb(104, 104, 104); font-weight:bold">Self-supuervised
+            <h4 class="title is-5 center-text"><span style="color: rgb(41, 34, 33); font-weight:bold">Self-supuervised
                 DLO occlusion
                 Single-Frame
                 Reconstruction Framework</span></h4>
@@ -286,11 +287,9 @@
           <div class="content has-text-justified">
             <p class="center-text">
               <span style="color: rgb(41, 34, 33); font-weight:bold"> A. Self-supervised
-                DLO Point cloud completion, </span>
-
-              <span style="color: rgb(41, 34, 33); font-weight:bold">B. Ordered key points generation.</span>
+                DLO Point cloud completion, B. Ordered key points generation.</span>
             </p>
-            <p>The framework employs <span style="color:rgb(102, 8, 116); font-weight:bold">a
+            <!-- <p>The framework employs <span style="color:rgb(102, 8, 116); font-weight:bold">a
                 self-supervised method</span> to complete the DLO's point clouds. To overcome the weak supervisory
               signals
               inherent in self-supervised learning, we introduce <span
@@ -308,7 +307,7 @@
               extraction capabilities of deep learning to capture global characteristics and represent information
               beyond pure geometry. By adopting a self-supervised learning approach, the framework <span
                 style="color: rgb(40,61, 126); font-weight:bold">eliminates the
-                need for labeled data in virtual environments, effectively bridging the Sim2Real gap</span>.</p>
+                need for labeled data in virtual environments, effectively bridging the Sim2Real gap</span>.</p> -->
             <!-- <p>
               After <span style="color: rgb(254, 180, 123); font-weight:bold;">embedding direction information</span>,
               the
@@ -349,10 +348,12 @@
     <div class="container is-max-desktop is-centered has-text-centered">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h3 class="title is-4">Synthetic Dataset Generation</h3>
+          <h3 class="title is-4"><span style="color: rgb(197, 90, 17);"> Simulation Experiments</span>—Synthetic
+            Dataset Generation</h3>
 
-          <h4 class="title is-5"> The DLO has randomly moving endpoints,while an occlusion cube moves to simulate
-            occlusions.</h4>
+          <h4 class="title is-5"> <span style="color: rgb(41, 34, 33); font-weight:bold">The DLO has randomly moving
+              endpoints, while an occlusion cube moves to simulate
+              occlusions.</span></h4>
 
           <div class="columns is-centered">
             <div class="video-container">
@@ -394,7 +395,8 @@
       <div class="columns is-centered">
 
         <div class="column is-full-width">
-          <h3 class="title is-4">Simulation Experiments Comparison Based on Synthetic Data</h3>
+          <h3 class="title is-4"><span style="color: rgb(197, 90, 17);"> Simulation Experiments</span>—Comparison
+            Results</h3>
           <!-- <p>We perform well on <span style="color: orange; font-weight:bold">intricate manipulations</span> such as complicated tool-using with <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object movements</span>, functional interactions with <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, and manipulations involving subtle object motions such as slight shaking.</p> -->
           <!-- We can accurately track <span style="color: orange; font-weight:bold">complex manipulations</span> involving <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, <br> <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object motions</span>, and <span style="color: rgb(30, 143, 2); font-weight:bold">intricate tool-using</span>. -->
 
@@ -413,42 +415,42 @@
                   height="100%">
                   <source data-src="./static/videos-lowres/simulation/compare1.mp4" type="video/mp4">
                 </video>
-                <p>Comparison of Linear Shapes 1</p>
+                <p>Case 1</p>
               </div>
               <div class="video-item">
                 <video id="Experimental Comparison Based on Virtual Data 2" class="lazy" autoplay muted loop playsinline
                   height="100%">
                   <source data-src="./static/videos-lowres/simulation/compare2.mp4" type="video/mp4">
                 </video>
-                <p>Comparison of Linear Shapes 2</p>
+                <p>Case 2</p>
               </div>
               <div class="video-item">
                 <video id="Experimental Comparison Based on Virtual Data 3" class="lazy" autoplay muted loop playsinline
                   height="100%">
                   <source data-src="./static/videos-lowres/simulation/compare3.mp4" type="video/mp4">
                 </video>
-                <p>Comparison of Linear Shapes 3</p>
+                <p>Case 3</p>
               </div>
               <div class="video-item">
                 <video id="Experimental Comparison Based on Virtual Data 4" class="lazy" autoplay muted loop playsinline
                   height="100%">
                   <source data-src="./static/videos-lowres/simulation/compare4.mp4" type="video/mp4">
                 </video>
-                <p>Comparison of Linear Shapes 4</p>
+                <p>Case 4</p>
               </div>
               <div class="video-item">
                 <video id="Experimental Comparison Based on Virtual Data 5" class="lazy" autoplay muted loop playsinline
                   height="100%">
                   <source data-src="./static/videos-lowres/simulation/compare5.mp4" type="video/mp4">
                 </video>
-                <p>Comparison of Linear Shapes 5</p>
+                <p>Case 5</p>
               </div>
               <div class="video-item">
                 <video id="Experimental Comparison Based on Virtual Data 6" class="lazy" autoplay muted loop playsinline
                   height="100%">
                   <source data-src="./static/videos-lowres/simulation/compare6.mp4" type="video/mp4">
                 </video>
-                <p>Comparison of Linear Shapes 6</p>
+                <p>Case 6</p>
               </div>
             </div>
           </div>
@@ -469,14 +471,16 @@
       <div class="columns is-centered">
         <!-- <h2 class="title is-3">Dexterous Manipulations Transfer</h2> -->
         <div class="column is-full-width">
-          <h3 class="title is-4">Training and Inference Results Based on Real Data</h3>
+          <!-- <h3 class="title is-4">Training and
+            Inference Results on Real Data</h3> -->
           <!-- <p>We perform well on <span style="color: orange; font-weight:bold">intricate manipulations</span> such as complicated tool-using with <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object movements</span>, functional interactions with <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, and manipulations involving subtle object motions such as slight shaking.</p> -->
           <!-- We can accurately track <span style="color: orange; font-weight:bold">complex manipulations</span> involving <span style="color: rgb(253, 125, 212); font-weight:bold">rich and changing contacts</span>, <br> <span style="color: rgb(36, 143, 236); font-weight:bold">non-trivial object motions</span>, and <span style="color: rgb(30, 143, 2); font-weight:bold">intricate tool-using</span>. -->
-          <br>
+          <!-- <br> -->
 
-          <h3 class="title is-4">Training Stage</h3>
+          <h3 class="title is-4"><span style="color: rgb(47, 85, 151);"> Real-world Experiments</span>—Training Stage
+          </h3>
 
-          <h4 class="title is-5"><span style="color: rgb(104, 104, 104); font-weight:bold">Simplify data collection by
+          <h4 class="title is-5"><span style="color: rgb(41, 34, 33); font-weight:bold">Simplify data collection by
               manual
               manipulation of both ends of DLO under an RGB-D
               camera.</span></h4>
@@ -499,7 +503,7 @@
                   <source data-src="./static/videos-lowres/manual/hand_collection_pcd.mp4" type="video/mp4">
                 </video>
                 <p>
-                  The Generated Point Cloud
+                  The Collected Point Cloud
                 </p>
               </div>
             </div>
@@ -509,12 +513,14 @@
           </div>
           <br>
 
-          <h3 class="title is-4">Inference Stage</h3>
+          <h3 class="title is-4"><span style="color: rgb(47, 85, 151);"> Real-world Experiments</span>—Inference Stage
+          </h3>
 
 
           <div class="column is-centered">
-            <h4 class="title is-5"><span style="color: rgb(104, 104, 104); font-weight:bold">Real-world
-                Experiments for Occlusion and Self-intersection</span></h4>
+            <h4 class="title is-5"><span style="color: rgb(41, 34, 33); font-weight:bold">Visualization of Occlusions
+                and
+                Self-intersections</span></h4>
             <div class="video-container">
               <div class="video-two-column">
                 <video id="normal robotic motion rgb" class="lazy fixed-height-video " autoplay muted loop playsinline
@@ -558,7 +564,7 @@
           <div class="container is-max-desktop is-centered has-text-centered">
             <div class="columns is-centered">
               <div class="hero-body">
-                <h4 class="title is-5"><span style="color: rgb(104, 104, 104); font-weight:bold">More Single Frame
+                <h4 class="title is-5"><span style="color: rgb(41, 34, 33); font-weight:bold">More Single Frame
                     Details</span></h4>
                 <div class="container">
                   <div id="results-carousel" class="carousel results-carousel">
@@ -567,7 +573,8 @@
                       <video poster="" id="fullbody" autoplay playsinline muted loop height="10%">
                         <source src="./static/videos-lowres/robotic/robotic2.mp4" type="video/mp4">
                       </video>
-                      <p>Robotic Single Frame 0152</p>
+                      <p>Viewpoint Occlusion</p>
+                      <p>Self-intersection</p>
                       <img src="./static/images/break.png" alt="space" width="100%">
 
 
@@ -577,7 +584,8 @@
                       <video poster="" id="scissors" autoplay playsinline muted loop height="10%">
                         <source src="./static/videos-lowres/robotic/robotic7.mp4" type="video/mp4">
                       </video>
-                      <p>Robotic Single Frame 0931</p>
+                      <p>Extensive Occlusion</p>
+                      <p>Trivial DLO Shape</p>
                       <img src="./static/images/break.png" alt="space" width="100%">
                     </div>
                     <div class="item item-shiba">
@@ -585,7 +593,8 @@
                       <video poster="" id="scissors" autoplay playsinline muted loop height="10%">
                         <source src="./static/videos-lowres/robotic/robotic5.mp4" type="video/mp4">
                       </video>
-                      <p>Robotic Single Frame 0285</p>
+                      <p>Spatial Proximity</p>
+                      <p>Self-intersection</p>
                       <img src="./static/images/break.png" alt="space" width="100%">
                     </div>
                     <div class="item item-shiba">
@@ -593,7 +602,8 @@
                       <video poster="" id="scissors" autoplay playsinline muted loop height="10%">
                         <source src="./static/videos-lowres/robotic/1025.mp4" type="video/mp4">
                       </video>
-                      <p>Robotic Single Frame 1025</p>
+                      <p>No Occlusion</p>
+                      <p>Trivial DLO Shape</p>
                       <img src="./static/images/break.png" alt="space" width="100%">
                     </div>
                     <div class="item item-shiba">
@@ -601,7 +611,8 @@
                       <video poster="" id="shiba" autoplay playsinline muted loop height="100%">
                         <source src="./static/videos-lowres/robotic/robotic6.mp4" type="video/mp4">
                       </video>
-                      <p>Robotic Single Frame 0644</p>
+                      <p>Viewpoint Occlusion</p>
+                      <p>Self-intersection</p>
                       <img src="./static/images/break.png" alt="space" width="100%">
                     </div>
                     <div class="item item-toby">
@@ -609,7 +620,8 @@
                       <video poster="" id="toby" autoplay playsinline muted loop height="100%">
                         <source src="./static/videos-lowres/robotic/1250.mp4" type="video/mp4">
                       </video>
-                      <p>Robotic Single Frame 1250</p>
+                      <p>Slight Occlusion</p>
+                      <p>Trivial DLO Shape</p>
                       <img src="./static/images/break.png" alt="space" width="100%">
                     </div>
                   </div>
@@ -627,7 +639,16 @@
   </section>
 
 
-
+  <section class="section" id="Contact">
+    <div class="container is-max-desktop content has-text-centered">
+      <!-- <h2 class="title">Contact</h2> -->
+      <h2 class="title is-3">Contact</h2>
+      <p>
+        Please contact us at <a href="mailto:wangs23@mails.tsinghua.edu.cn">wangs23@mails.tsinghua.edu.cn</a>, if you
+        have any question.
+      </p>
+    </div>
+  </section>
 
   <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
   <!-- <script src="/assets/js/yall.js"></script> -->

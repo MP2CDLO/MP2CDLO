@@ -256,7 +256,7 @@ video {
 }
 
 .custom-line {
-  width: 80%;
+  width: 720px;
   /* 分割线的宽度 */
   border-top: 2px solid #686868;
   /* 分割线的样式和颜色 */
