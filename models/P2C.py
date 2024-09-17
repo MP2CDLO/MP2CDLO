@@ -162,36 +162,12 @@ class P2C(nn.Module):
         return nbr_groups, center_groups
 
     def get_loss(self, pts):
-        # group points
-        nbrs , center = self.group_divider(pts)  # neighborhood, center
-        B, G, _ = center.shape
-        nbr_groups, center_groups = self._group_points(nbrs, center, B, G)
-        # pre-encoding -- partition 1
-        rebuild_points = nbr_groups[0] + center_groups[0].unsqueeze(-2)
-        feat  = self.encoder(rebuild_points.view(B, -1, 3))
-
-        # complete shape generation
-        pred = self.generator(feat).contiguous()
-
-        # shape reconstruction loss
-        rebuild_points = nbr_groups[0] + center_groups[0].unsqueeze(-2)
-        idx = pointops.knn(center_groups[0], pred,  int(self.nbr_ratio * self.group_size))[0]
-        nbrs_pred = pointops.index_points(pred, idx).reshape(B, -1, 3) # error encountered here; 20 * 2 *64>2048
-        shape_recon_loss = self.shape_recon_weight * self.shape_criterion(rebuild_points.reshape(B, -1, 3), nbrs_pred).mean()
-        # shape completion loss
-        rebuild_points = nbr_groups[1] + center_groups[1].unsqueeze(-2)
-        idx = pointops.knn(center_groups[1], pred,  int(self.nbr_ratio * self.group_size))[0]
-        nbrs_pred = pointops.index_points(pred, idx).reshape(B, -1, 3)
-        shape_matching_loss = self.shape_matching_weight * self.shape_criterion(rebuild_points.reshape(B, -1, 3), nbrs_pred).mean()
-        # latent reconstruction loss
-        idx = pointops.knn(center_groups[2], pred, self.group_size)[0]
-        nbrs_pred = pointops.index_points(pred, idx)
-        feat_recon = self.encoder(nbrs_pred.view(B, -1, 3).detach())
-        latent_recon_loss = self.latent_weight * self.latent_criterion(feat, feat_recon)
-        # normal consistency constraint
-        manifold_penalty = self.manifold_weight * self.manifold_constraint(pred).mean()
-
-        total_loss = shape_recon_loss + shape_matching_loss + latent_recon_loss + manifold_penalty
+        pass
+        total_loss = None
+        shape_recon_loss = None
+        shape_matching_loss = None
+        latent_recon_loss = None
+        manifold_penalty = None
 
         return total_loss, shape_recon_loss, shape_matching_loss, latent_recon_loss, manifold_penalty
 

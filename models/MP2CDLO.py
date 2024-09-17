@@ -125,17 +125,8 @@ class DLO_constrains_loss(nn.Module):
         self._beta = beta
 
     def forward(self, pointclouds):
-        b, N, dim = pointclouds.shape
-        _, group_means = DCL.group_points(pointclouds, num_points=self._group_nums, group_size=self._group_size)
-        # curvatures [b,group_nums,3] coord_frames [b,group_nums,3,3]
-        curvatures, coord_frames, _ = DCL.estimate_pointcloud_local_coord_frames(pointclouds=pointclouds,
-                                                                                 sampled_points=group_means,
-                                                                                 neighborhood_size=self._group_size)
-        first_vec = curvatures[:, :, 2] / (curvatures[:, :, 0] + curvatures[:, :, 1] + curvatures[:, :, 2] + 1e-9)
-        second_vec = curvatures[:, :, 1] / (curvatures[:, :, 0] + curvatures[:, :, 1] + curvatures[:, :, 2] + 1e-9)
-        elongated_shape_loss = -torch.sum(first_vec - second_vec) / b
-        dlo_smooth_loss = DCL.angular_cost(group_means=group_means, points_directions=coord_frames[:, :, :, 2])
-        loss = elongated_shape_loss + self._beta * dlo_smooth_loss
+        pass
+        loss = None
         return loss
 
 
@@ -236,42 +227,12 @@ class MP2CDLO(nn.Module):
         return nbr_groups, center_groups
 
     def get_loss(self, pts):
-        self.counter += 1
-        # group points
-        nbrs, center = self.group_divider(pts)  # neighborhood, center
-        B, G, _ = center.shape
-        nbr_groups, center_groups = self._group_points(nbrs, center, B, G)
-        # pre-encoding -- partition 1
-        rebuild_points = nbr_groups[0] + center_groups[0].unsqueeze(-2)
-        feat = self.encoder(self.pointenhance(rebuild_points.view(B, -1, 3)), True)
-
-        # complete shape generation
-        pred = self.generator(feat).contiguous()
-
-        # shape reconstruction loss
-        rebuild_points = nbr_groups[0] + center_groups[0].unsqueeze(-2)
-        idx = pointops.knn(center_groups[0], pred, int(self.nbr_ratio * self.group_size))[0]
-        nbrs_pred = pointops.index_points(pred, idx).reshape(B, -1, 3)
-        shape_recon_loss = self.shape_recon_weight * self.shape_criterion(rebuild_points.reshape(B, -1, 3),
-                                                                          nbrs_pred).mean()
-        # shape completion loss
-        rebuild_points = nbr_groups[1] + center_groups[1].unsqueeze(-2)
-        idx = pointops.knn(center_groups[1], pred, int(self.nbr_ratio * self.group_size))[0]
-        nbrs_pred = pointops.index_points(pred, idx).reshape(B, -1, 3)
-        shape_matching_loss = self.shape_matching_weight * self.shape_criterion(rebuild_points.reshape(B, -1, 3),
-                                                                                nbrs_pred).mean()
-        # latent reconstruction loss
-        idx = pointops.knn(center_groups[2], pred, self.group_size)[0]
-        nbrs_pred = pointops.index_points(pred, idx)
-        feat_recon = self.encoder(self.pointenhance(nbrs_pred.view(B, -1, 3).detach()), True)
-        latent_recon_loss = self.latent_weight * self.latent_criterion(feat, feat_recon)
-        # fine-tune the weight of dlo constrains loss; 46 is the number of batch in one epoch(46=total_data_size/batch_size)
-        if self.counter % (46 * 100) == 0 and self.dlo_constrains_weight < 0.064:
-            self.dlo_constrains_weight *= 2
-        # dlo constrains loss
-        dlo_constrains_loss = self.dlo_constrains_weight * self.dlo_constrains_loss(pred)
-
-        total_loss = shape_recon_loss + shape_matching_loss + latent_recon_loss + dlo_constrains_loss
+        pass
+        total_loss = None
+        shape_recon_loss = None
+        shape_matching_loss = None
+        latent_recon_loss = None
+        dlo_constrains_loss = None
 
         return total_loss, shape_recon_loss, shape_matching_loss, latent_recon_loss, dlo_constrains_loss
 
